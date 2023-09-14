@@ -10,15 +10,12 @@ export default () => {
   extend(MobileTab.prototype, 'items', (items) => {
     // Add new item
     items.add(
-      'following',
-      <MobileTabItem href={app.route('following')} icon="fas fa-star" label={app.translator.trans('my-ext.forum.my-item')} />,
+      'categories',
+      <MobileTabItem href={app.route('categories')} icon="fas fa-label" label={app.translator.trans('my-ext.forum.my-item')} />,
       90
     );
 
-    // Add new item using custom HTML
-    items.add('my-item', <div>...This is my custom item</div>, 70);
-
     // Remove item
-    items.remove('home');
+    items.remove('tags');
   });
 };

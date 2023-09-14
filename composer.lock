@@ -4,29 +4,116 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e5c34b2916545526a0443de86414a39",
+    "content-hash": "9cc616163fb664ffe4bf804bb2b4c123",
     "packages": [
         {
-            "name": "axy/backtrace",
-            "version": "1.0.7",
+            "name": "acpl/mobile-tab",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/axypro/backtrace.git",
-                "reference": "c6c7d0f3497a07ae934f9e8511cbc2286db311c5"
+                "url": "https://github.com/android-com-pl/mobile-tab.git",
+                "reference": "923687fb39299ab14860cbfe45a1d9919e1ddf15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/axypro/backtrace/zipball/c6c7d0f3497a07ae934f9e8511cbc2286db311c5",
-                "reference": "c6c7d0f3497a07ae934f9e8511cbc2286db311c5",
+                "url": "https://api.github.com/repos/android-com-pl/mobile-tab/zipball/923687fb39299ab14860cbfe45a1d9919e1ddf15",
+                "reference": "923687fb39299ab14860cbfe45a1d9919e1ddf15",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "flarum/core": "^1.2"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Mobile tab",
+                    "category": "theme",
+                    "icon": {
+                        "name": "fas fa-ellipsis-h",
+                        "backgroundColor": "#0F9D58",
+                        "color": "#fff"
+                    }
+                },
+                "optional-dependencies": [
+                    "flarum/tags"
+                ],
+                "flarum-cli": {
+                    "modules": {
+                        "admin": false,
+                        "forum": true,
+                        "js": true,
+                        "jsCommon": false,
+                        "gitConf": true,
+                        "githubActions": true,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "backendTesting": false,
+                        "editorConfig": true,
+                        "styleci": true,
+                        "css": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acpl\\MobileTab\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rafał Całka",
+                    "homepage": "https://github.com/rafaucau",
+                    "role": "Developer"
+                }
+            ],
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/28216-mobile-tab",
+                "issues": "https://github.com/android-com-pl/mobile-tab/issues",
+                "source": "https://github.com/android-com-pl/mobile-tab"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/android-com-pl",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-09-23T21:27:08+00:00"
+        },
+        {
+            "name": "axy/backtrace",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/axypro/backtrace.git",
+                "reference": "e0f806986db00190e567b0071c765bd792360f06"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/axypro/backtrace/zipball/e0f806986db00190e567b0071c765bd792360f06",
+                "reference": "e0f806986db00190e567b0071c765bd792360f06",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^7.5",
+                "squizlabs/php_codesniffer": "^3.4"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "axy\\backtrace\\": ""
+                    "axy\\backtrace\\": "src",
+                    "axy\\backtrace\\tests\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -49,154 +136,9 @@
             ],
             "support": {
                 "issues": "https://github.com/axypro/backtrace/issues",
-                "source": "https://github.com/axypro/backtrace/tree/1.0.7"
+                "source": "https://github.com/axypro/backtrace/tree/2.0.0"
             },
-            "time": "2019-02-02T15:52:44+00:00"
-        },
-        {
-            "name": "axy/codecs-base64vlq",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/axypro/codecs-base64vlq.git",
-                "reference": "53a1957f2cb773c6533ac615b3f1ac59e40e13cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/axypro/codecs-base64vlq/zipball/53a1957f2cb773c6533ac615b3f1ac59e40e13cc",
-                "reference": "53a1957f2cb773c6533ac615b3f1ac59e40e13cc",
-                "shasum": ""
-            },
-            "require": {
-                "axy/errors": "~1.0.1",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "axy\\codecs\\base64vlq\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oleg Grigoriev",
-                    "email": "go.vasac@gmail.com"
-                }
-            ],
-            "description": "Codec for VLQ (variable-length quantity) Base64 algorithm",
-            "homepage": "https://github.com/axypro/codecs-base64vlq",
-            "keywords": [
-                "Source map",
-                "VLQ",
-                "Variable length quantity",
-                "base64",
-                "codec"
-            ],
-            "support": {
-                "issues": "https://github.com/axypro/codecs-base64vlq/issues",
-                "source": "https://github.com/axypro/codecs-base64vlq/tree/master"
-            },
-            "time": "2015-11-23T07:08:52+00:00"
-        },
-        {
-            "name": "axy/errors",
-            "version": "1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/axypro/errors.git",
-                "reference": "2c64374ae2b9ca51304c09b6b6acc275557fc34f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/axypro/errors/zipball/2c64374ae2b9ca51304c09b6b6acc275557fc34f",
-                "reference": "2c64374ae2b9ca51304c09b6b6acc275557fc34f",
-                "shasum": ""
-            },
-            "require": {
-                "axy/backtrace": "~1.0.2",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "axy\\errors\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oleg Grigoriev",
-                    "email": "go.vasac@gmail.com"
-                }
-            ],
-            "description": "Exceptions in PHP",
-            "homepage": "https://github.com/axypro/errors",
-            "keywords": [
-                "error",
-                "exception"
-            ],
-            "support": {
-                "issues": "https://github.com/axypro/errors/issues",
-                "source": "https://github.com/axypro/errors/tree/1.0.5"
-            },
-            "time": "2019-02-02T18:26:18+00:00"
-        },
-        {
-            "name": "axy/sourcemap",
-            "version": "0.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/axypro/sourcemap.git",
-                "reference": "95a52df5a08c3a011031dae2e79390134e28467c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/axypro/sourcemap/zipball/95a52df5a08c3a011031dae2e79390134e28467c",
-                "reference": "95a52df5a08c3a011031dae2e79390134e28467c",
-                "shasum": ""
-            },
-            "require": {
-                "axy/codecs-base64vlq": "~1.0.0",
-                "axy/errors": "~1.0.1",
-                "ext-json": "*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "axy\\sourcemap\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oleg Grigoriev",
-                    "email": "go.vasac@gmail.com"
-                }
-            ],
-            "description": "Work with JavaScript/CSS Source Map",
-            "homepage": "https://github.com/axypro/sourcemap",
-            "keywords": [
-                "Source map",
-                "css",
-                "javascript",
-                "sourcemap"
-            ],
-            "support": {
-                "issues": "https://github.com/axypro/sourcemap/issues",
-                "source": "https://github.com/axypro/sourcemap/tree/0.1.5"
-            },
-            "time": "2020-08-20T09:49:44+00:00"
+            "time": "2019-02-02T18:01:31+00:00"
         },
         {
             "name": "brick/math",
@@ -938,6 +880,67 @@
             "time": "2022-02-28T11:07:21+00:00"
         },
         {
+            "name": "dragonmantank/cron-expression",
+            "version": "v3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dragonmantank/cron-expression.git",
+                "reference": "adfb1f505deb6384dc8b39804c5065dd3c8c8c0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dragonmantank/cron-expression/zipball/adfb1f505deb6384dc8b39804c5065dd3c8c8c0a",
+                "reference": "adfb1f505deb6384dc8b39804c5065dd3c8c8c0a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0",
+                "webmozart/assert": "^1.0"
+            },
+            "replace": {
+                "mtdowling/cron-expression": "^1.0"
+            },
+            "require-dev": {
+                "phpstan/extension-installer": "^1.0",
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-webmozart-assert": "^1.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cron\\": "src/Cron/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Tankersley",
+                    "email": "chris@ctankersley.com",
+                    "homepage": "https://github.com/dragonmantank"
+                }
+            ],
+            "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+            "keywords": [
+                "cron",
+                "schedule"
+            ],
+            "support": {
+                "issues": "https://github.com/dragonmantank/cron-expression/issues",
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.3.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/dragonmantank",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-08-10T19:36:49+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "2.1.25",
             "source": {
@@ -1134,27 +1137,29 @@
         },
         {
             "name": "flarum/core",
-            "version": "v0.1.0-beta.16",
+            "version": "v1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "9fffb8ec1a15926b5ee10c052224e5cc8035b6f5"
+                "reference": "ce3bbf02f0f4dbb9cc56752c1c49a6c42b63f1fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/9fffb8ec1a15926b5ee10c052224e5cc8035b6f5",
-                "reference": "9fffb8ec1a15926b5ee10c052224e5cc8035b6f5",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/ce3bbf02f0f4dbb9cc56752c1c49a6c42b63f1fc",
+                "reference": "ce3bbf02f0f4dbb9cc56752c1c49a6c42b63f1fc",
                 "shasum": ""
             },
             "require": {
-                "axy/sourcemap": "^0.1.4",
                 "components/font-awesome": "^5.14.0",
                 "dflydev/fig-cookies": "^3.0.0",
                 "doctrine/dbal": "^2.7",
+                "dragonmantank/cron-expression": "^3.1.0",
                 "franzl/whoops-middleware": "^2.0.0",
+                "guzzlehttp/guzzle": "^6.0|^7.4",
                 "illuminate/bus": "^8.0",
                 "illuminate/cache": "^8.0",
                 "illuminate/config": "^8.0",
+                "illuminate/console": "^8.0",
                 "illuminate/container": "^8.0",
                 "illuminate/contracts": "^8.0",
                 "illuminate/database": "^8.0",
@@ -1167,9 +1172,10 @@
                 "illuminate/support": "^8.0",
                 "illuminate/validation": "^8.0",
                 "illuminate/view": "^8.0",
-                "intervention/image": "^2.5.0",
+                "intervention/image": "2.5.* || ^2.6.1",
+                "jenssegers/agent": "^2.6",
                 "laminas/laminas-diactoros": "^2.4.1",
-                "laminas/laminas-httphandlerrunner": "^1.2.0",
+                "laminas/laminas-httphandlerrunner": "^1.2.0 || ^2.3.0",
                 "laminas/laminas-stratigility": "^3.2.2",
                 "league/flysystem": "^1.0.11",
                 "matthiasmullie/minify": "^1.3",
@@ -1179,33 +1185,57 @@
                 "monolog/monolog": "^1.16.0",
                 "nesbot/carbon": "^2.0",
                 "nikic/fast-route": "^0.6",
-                "php": ">=7.3",
+                "php": ">=7.3 || ^8.0",
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "psr/http-server-middleware": "^1.0",
                 "s9e/text-formatter": "^2.3.6",
+                "staudenmeir/eloquent-eager-limit": "^1.0",
+                "sycho/json-api": "^0.5.0",
+                "sycho/sourcemap": "^2.0.0",
                 "symfony/config": "^5.2.2",
                 "symfony/console": "^5.2.2",
                 "symfony/event-dispatcher": "^5.2.2",
                 "symfony/mime": "^5.2.0",
+                "symfony/polyfill-intl-messageformatter": "^1.22.0",
                 "symfony/translation": "^5.1.5",
                 "symfony/yaml": "^5.2.2",
-                "tobscure/json-api": "^0.3.0",
-                "wikimedia/less.php": "^3.0"
+                "wikimedia/less.php": "^3.2"
             },
             "require-dev": {
-                "flarum/testing": "^0.1.0-beta.16"
+                "flarum/testing": "^1.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1.x-dev"
+                    "dev-main": "1.x-dev"
+                },
+                "flarum-cli": {
+                    "excludeScaffolding": [
+                        "LICENSE.md",
+                        "js/tsconfig.json",
+                        "js/webpack.config.js"
+                    ],
+                    "modules": {
+                        "backendTesting": true,
+                        "js": true,
+                        "gitConf": true,
+                        "githubActions": true,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": true,
+                        "editorConfig": true,
+                        "styleci": true,
+                        "admin": true,
+                        "forum": true,
+                        "jsCommon": true,
+                        "css": true
+                    }
                 }
             },
             "autoload": {
                 "files": [
-                    "src/helpers.php",
-                    "src/TranslatorInterface.php"
+                    "src/helpers.php"
                 ],
                 "psr-4": {
                     "Flarum\\": "src/"
@@ -1229,21 +1259,27 @@
                 "forum"
             ],
             "support": {
-                "docs": "https://flarum.org/docs/",
-                "issues": "https://github.com/flarum/core/issues",
-                "source": "https://github.com/flarum/core"
+                "chat": "https://flarum.org/chat",
+                "docs": "https://docs.flarum.org",
+                "forum": "https://discuss.flarum.org",
+                "issues": "https://github.com/flarum/framework/issues",
+                "source": "https://github.com/flarum/flarum-core"
             },
             "funding": [
                 {
-                    "url": "https://github.com/flarum",
+                    "url": "https://github.com/sponsors/flarum",
                     "type": "github"
                 },
                 {
                     "url": "https://opencollective.com/flarum",
-                    "type": "open_collective"
+                    "type": "opencollective"
+                },
+                {
+                    "url": "https://flarum.org/donate",
+                    "type": "other"
                 }
             ],
-            "time": "2021-03-15T16:48:47+00:00"
+            "time": "2023-05-23T18:24:51+00:00"
         },
         {
             "name": "franzl/whoops-middleware",
@@ -1288,6 +1324,215 @@
                 "source": "https://github.com/franzliedke/whoops-middleware/tree/2.0.0"
             },
             "time": "2021-01-03T01:30:07+00:00"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "7.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/1110f66a6530a40fe7aea0378fe608ee2b2248f9",
+                "reference": "1110f66a6530a40fe7aea0378fe608ee2b2248f9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/promises": "^1.5.3 || ^2.0.1",
+                "guzzlehttp/psr7": "^1.9.1 || ^2.5.1",
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-client": "^1.0",
+                "symfony/deprecation-contracts": "^2.2 || ^3.0"
+            },
+            "provide": {
+                "psr/http-client-implementation": "1.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8.1",
+                "ext-curl": "*",
+                "php-http/client-integration-tests": "dev-master#2c025848417c1135031fdf9c728ee53d0a7ceaee as 3.0.999",
+                "php-http/message-factory": "^1.1",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23",
+                "psr/log": "^1.1 || ^2.0 || ^3.0"
+            },
+            "suggest": {
+                "ext-curl": "Required for CURL handler support",
+                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
+                "psr/log": "Required for using the Log middleware"
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Jeremy Lindblom",
+                    "email": "jeremeamia@gmail.com",
+                    "homepage": "https://github.com/jeremeamia"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "psr-18",
+                "psr-7",
+                "rest",
+                "web service"
+            ],
+            "support": {
+                "issues": "https://github.com/guzzle/guzzle/issues",
+                "source": "https://github.com/guzzle/guzzle/tree/7.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/guzzle",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-08-27T10:20:53+00:00"
+        },
+        {
+            "name": "guzzlehttp/promises",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/111166291a0f8130081195ac4556a5587d7f1b5d",
+                "reference": "111166291a0f8130081195ac4556a5587d7f1b5d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8.1",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "support": {
+                "issues": "https://github.com/guzzle/promises/issues",
+                "source": "https://github.com/guzzle/promises/tree/2.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/promises",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-08-03T15:11:55+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2608,6 +2853,141 @@
             "time": "2022-05-21T17:30:32+00:00"
         },
         {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.116",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "97e9fe30219e60092e107651abb379a38b342921"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/97e9fe30219e60092e107651abb379a38b342921",
+                "reference": "97e9fe30219e60092e107651abb379a38b342921",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^9.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "support": {
+                "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.116"
+            },
+            "time": "2023-07-21T15:49:49+00:00"
+        },
+        {
+            "name": "jenssegers/agent",
+            "version": "v2.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/agent.git",
+                "reference": "daa11c43729510b3700bc34d414664966b03bffe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/agent/zipball/daa11c43729510b3700bc34d414664966b03bffe",
+                "reference": "daa11c43729510b3700bc34d414664966b03bffe",
+                "shasum": ""
+            },
+            "require": {
+                "jaybizzle/crawler-detect": "^1.2",
+                "mobiledetect/mobiledetectlib": "^2.7.6",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5.0|^6.0|^7.0"
+            },
+            "suggest": {
+                "illuminate/support": "Required for laravel service providers"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Jenssegers\\Agent\\AgentServiceProvider"
+                    ],
+                    "aliases": {
+                        "Agent": "Jenssegers\\Agent\\Facades\\Agent"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Agent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "Desktop/mobile user agent parser with support for Laravel, based on Mobiledetect",
+            "homepage": "https://github.com/jenssegers/agent",
+            "keywords": [
+                "Agent",
+                "browser",
+                "desktop",
+                "laravel",
+                "mobile",
+                "platform",
+                "user agent",
+                "useragent"
+            ],
+            "support": {
+                "issues": "https://github.com/jenssegers/agent/issues",
+                "source": "https://github.com/jenssegers/agent/tree/v2.6.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/jenssegers",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/jenssegers/agent",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-13T08:05:20+00:00"
+        },
+        {
             "name": "laminas/laminas-diactoros",
             "version": "2.25.2",
             "source": {
@@ -2768,34 +3148,30 @@
         },
         {
             "name": "laminas/laminas-httphandlerrunner",
-            "version": "1.5.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-httphandlerrunner.git",
-                "reference": "5f94e55d93f756e8ad07b9049aeb3d6d84582d0e"
+                "reference": "7a47834aaad7852816d2ec4fdbb0492163b039ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/5f94e55d93f756e8ad07b9049aeb3d6d84582d0e",
-                "reference": "5f94e55d93f756e8ad07b9049aeb3d6d84582d0e",
+                "url": "https://api.github.com/repos/laminas/laminas-httphandlerrunner/zipball/7a47834aaad7852816d2ec4fdbb0492163b039ae",
+                "reference": "7a47834aaad7852816d2ec4fdbb0492163b039ae",
                 "shasum": ""
             },
             "require": {
-                "laminas/laminas-zendframework-bridge": "^1.0",
-                "php": "^7.3 || ~8.0.0 || ~8.1.0",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
                 "psr/http-message": "^1.0",
                 "psr/http-message-implementation": "^1.0",
                 "psr/http-server-handler": "^1.0"
             },
-            "replace": {
-                "zendframework/zend-httphandlerrunner": "^1.1.0"
-            },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~1.0.0",
-                "laminas/laminas-diactoros": "^2.8.0",
-                "phpunit/phpunit": "^9.5.9",
-                "psalm/plugin-phpunit": "^0.16.1",
-                "vimeo/psalm": "^4.10.0"
+                "laminas/laminas-coding-standard": "~2.4.0",
+                "laminas/laminas-diactoros": "^2.18",
+                "phpunit/phpunit": "^9.5.26",
+                "psalm/plugin-phpunit": "^0.18.0",
+                "vimeo/psalm": "^5.0.0"
             },
             "type": "library",
             "extra": {
@@ -2835,7 +3211,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-22T09:17:54+00:00"
+            "time": "2023-01-05T21:54:03+00:00"
         },
         {
             "name": "laminas/laminas-stratigility",
@@ -2915,68 +3291,6 @@
                 }
             ],
             "time": "2023-05-09T14:23:43+00:00"
-        },
-        {
-            "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "5ef52e26392777a26dbb8f20fe24f91b406459f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/5ef52e26392777a26dbb8f20fe24f91b406459f6",
-                "reference": "5ef52e26392777a26dbb8f20fe24f91b406459f6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5.26",
-                "psalm/plugin-phpunit": "^0.18.0",
-                "squizlabs/php_codesniffer": "^3.7.1",
-                "vimeo/psalm": "^4.29.0"
-            },
-            "type": "library",
-            "extra": {
-                "laminas": {
-                    "module": "Laminas\\ZendFrameworkBridge"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/autoload.php"
-                ],
-                "psr-4": {
-                    "Laminas\\ZendFrameworkBridge\\": "src//"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "Alias legacy ZF class names to Laminas Project equivalents.",
-            "keywords": [
-                "ZendFramework",
-                "autoloading",
-                "laminas",
-                "zf"
-            ],
-            "support": {
-                "forum": "https://discourse.laminas.dev/",
-                "issues": "https://github.com/laminas/laminas-zendframework-bridge/issues",
-                "rss": "https://github.com/laminas/laminas-zendframework-bridge/releases.atom",
-                "source": "https://github.com/laminas/laminas-zendframework-bridge"
-            },
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
-            "time": "2022-12-12T11:44:10+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -3725,6 +4039,62 @@
             "time": "2021-07-04T17:56:23+00:00"
         },
         {
+            "name": "mobiledetect/mobiledetectlib",
+            "version": "2.8.41",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serbanghita/Mobile-Detect.git",
+                "reference": "fc9cccd4d3706d5a7537b562b59cc18f9e4c0cb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/fc9cccd4d3706d5a7537b562b59cc18f9e4c0cb1",
+                "reference": "fc9cccd4d3706d5a7537b562b59cc18f9e4c0cb1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.35||~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Detection": "namespaced/"
+                },
+                "classmap": [
+                    "Mobile_Detect.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serban Ghita",
+                    "email": "serbanghita@gmail.com",
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+            "homepage": "https://github.com/serbanghita/Mobile-Detect",
+            "keywords": [
+                "detect mobile devices",
+                "mobile",
+                "mobile detect",
+                "mobile detector",
+                "php mobile detect"
+            ],
+            "support": {
+                "issues": "https://github.com/serbanghita/Mobile-Detect/issues",
+                "source": "https://github.com/serbanghita/Mobile-Detect/tree/2.8.41"
+            },
+            "time": "2022-11-08T18:31:26+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.27.1",
             "source": {
@@ -4322,6 +4692,58 @@
                 "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
             },
             "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
+            "name": "psr/http-client",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-client.git",
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0 || ^8.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP clients",
+            "homepage": "https://github.com/php-fig/http-client",
+            "keywords": [
+                "http",
+                "http-client",
+                "psr",
+                "psr-18"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
+            },
+            "time": "2023-04-10T20:12:12+00:00"
         },
         {
             "name": "psr/http-factory",
@@ -4959,16 +5381,16 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.14.0",
+            "version": "2.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "48a2f3a3fb18af8d78330204732a3369441c4060"
+                "reference": "19c0005a4c6513f73ed8d780959bcc5453b4fa37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/48a2f3a3fb18af8d78330204732a3369441c4060",
-                "reference": "48a2f3a3fb18af8d78330204732a3369441c4060",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/19c0005a4c6513f73ed8d780959bcc5453b4fa37",
+                "reference": "19c0005a4c6513f73ed8d780959bcc5453b4fa37",
                 "shasum": ""
             },
             "require": {
@@ -4995,7 +5417,7 @@
             },
             "type": "library",
             "extra": {
-                "version": "2.14.0"
+                "version": "2.14.1"
             },
             "autoload": {
                 "psr-4": {
@@ -5027,9 +5449,59 @@
             ],
             "support": {
                 "issues": "https://github.com/s9e/TextFormatter/issues",
-                "source": "https://github.com/s9e/TextFormatter/tree/2.14.0"
+                "source": "https://github.com/s9e/TextFormatter/tree/2.14.1"
             },
-            "time": "2023-06-08T07:19:50+00:00"
+            "time": "2023-09-14T09:16:53+00:00"
+        },
+        {
+            "name": "staudenmeir/eloquent-eager-limit",
+            "version": "v1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/staudenmeir/eloquent-eager-limit.git",
+                "reference": "439135c4b3361a313c2e7102d68bf807518d1bf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/staudenmeir/eloquent-eager-limit/zipball/439135c4b3361a313c2e7102d68bf807518d1bf9",
+                "reference": "439135c4b3361a313c2e7102d68bf807518d1bf9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Staudenmeir\\EloquentEagerLimit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonas Staudenmeir",
+                    "email": "mail@jonas-staudenmeir.de"
+                }
+            ],
+            "description": "Laravel Eloquent eager loading with limit",
+            "support": {
+                "issues": "https://github.com/staudenmeir/eloquent-eager-limit/issues",
+                "source": "https://github.com/staudenmeir/eloquent-eager-limit/tree/v1.6.1"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/JonasStaudenmeir",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-11-22T18:13:55+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5106,6 +5578,230 @@
             ],
             "abandoned": "symfony/mailer",
             "time": "2021-10-18T15:26:12+00:00"
+        },
+        {
+            "name": "sycho/codecs-base64vlq",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SychO9/codecs-base64vlq.git",
+                "reference": "210932edfb29049831e4def7f11a264944132ac9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SychO9/codecs-base64vlq/zipball/210932edfb29049831e4def7f11a264944132ac9",
+                "reference": "210932edfb29049831e4def7f11a264944132ac9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "sycho/errors": "^3.0"
+            },
+            "require-dev": {
+                "sycho/errors": "^3.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "axy\\codecs\\base64vlq\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleg Grigoriev",
+                    "email": "go.vasac@gmail.com"
+                }
+            ],
+            "description": "Codec for VLQ (variable-length quantity) Base64 algorithm",
+            "homepage": "https://github.com/sycho9/codecs-base64vlq",
+            "keywords": [
+                "Source map",
+                "VLQ",
+                "Variable length quantity",
+                "base64",
+                "codec"
+            ],
+            "support": {
+                "source": "https://github.com/SychO9/codecs-base64vlq/tree/2.0.0"
+            },
+            "time": "2022-04-09T13:12:22+00:00"
+        },
+        {
+            "name": "sycho/errors",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SychO9/errors.git",
+                "reference": "82e955d247940aa7feed35e1ec7a61fc46639582"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SychO9/errors/zipball/82e955d247940aa7feed35e1ec7a61fc46639582",
+                "reference": "82e955d247940aa7feed35e1ec7a61fc46639582",
+                "shasum": ""
+            },
+            "require": {
+                "axy/backtrace": "~2.0.0",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^9.0",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "axy\\errors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleg Grigoriev",
+                    "email": "go.vasac@gmail.com"
+                }
+            ],
+            "description": "Exceptions in PHP",
+            "homepage": "https://github.com/sycho9/errors",
+            "keywords": [
+                "error",
+                "exception"
+            ],
+            "support": {
+                "source": "https://github.com/SychO9/errors/tree/3.0.0"
+            },
+            "time": "2022-04-09T13:10:47+00:00"
+        },
+        {
+            "name": "sycho/json-api",
+            "version": "v0.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SychO9/json-api-php.git",
+                "reference": "5ef867317a6b39b307af0fc98c5b9c5828607301"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SychO9/json-api-php/zipball/5ef867317a6b39b307af0fc98c5b9c5828607301",
+                "reference": "5ef867317a6b39b307af0fc98c5b9c5828607301",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tobscure\\JsonApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Toby Zerner",
+                    "email": "toby.zerner@gmail.com"
+                }
+            ],
+            "description": "JSON-API responses in PHP",
+            "keywords": [
+                "api",
+                "json",
+                "jsonapi",
+                "standard"
+            ],
+            "support": {
+                "source": "https://github.com/SychO9/json-api-php/tree/v0.5.2"
+            },
+            "time": "2023-04-16T10:46:37+00:00"
+        },
+        {
+            "name": "sycho/sourcemap",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SychO9/sourcemap.git",
+                "reference": "81d514186e37efbea7f4dd701ea9133fd3412bf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SychO9/sourcemap/zipball/81d514186e37efbea7f4dd701ea9133fd3412bf1",
+                "reference": "81d514186e37efbea7f4dd701ea9133fd3412bf1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.3",
+                "sycho/codecs-base64vlq": "^2.0",
+                "sycho/errors": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0",
+                "sycho/codecs-base64vlq": "^2.x-dev",
+                "sycho/errors": "^3.x-dev"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "axy\\sourcemap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleg Grigoriev",
+                    "email": "go.vasac@gmail.com"
+                }
+            ],
+            "description": "Work with JavaScript/CSS Source Map",
+            "homepage": "https://github.com/sycho9/sourcemap",
+            "keywords": [
+                "Source map",
+                "css",
+                "javascript",
+                "sourcemap"
+            ],
+            "support": {
+                "source": "https://github.com/SychO9/sourcemap/tree/2.0.0"
+            },
+            "time": "2022-04-09T13:13:12+00:00"
         },
         {
             "name": "symfony/config",
@@ -6201,6 +6897,90 @@
             "time": "2023-01-26T09:30:37+00:00"
         },
         {
+            "name": "symfony/polyfill-intl-messageformatter",
+            "version": "v1.28.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-messageformatter.git",
+                "reference": "695939f0c6342f252050ad3e6b855ac745b99e18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-messageformatter/zipball/695939f0c6342f252050ad3e6b855ac745b99e18",
+                "reference": "695939f0c6342f252050ad3e6b855ac745b99e18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.28-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\MessageFormatter\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's MessageFormatter class and related functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "intl",
+                "messageformatter",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-messageformatter/tree/v1.28.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-01-26T09:26:14+00:00"
+        },
+        {
             "name": "symfony/polyfill-intl-normalizer",
             "version": "v1.28.0",
             "source": {
@@ -7218,61 +7998,6 @@
             "time": "2023-01-03T09:29:04+00:00"
         },
         {
-            "name": "tobscure/json-api",
-            "version": "v0.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tobscure/json-api.git",
-                "reference": "663d1c1299d4363758e8e440e5849134f218f45c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tobscure/json-api/zipball/663d1c1299d4363758e8e440e5849134f218f45c",
-                "reference": "663d1c1299d4363758e8e440e5849134f218f45c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tobscure\\JsonApi\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Toby Zerner",
-                    "email": "toby.zerner@gmail.com"
-                }
-            ],
-            "description": "JSON-API responses in PHP",
-            "keywords": [
-                "api",
-                "json",
-                "jsonapi",
-                "standard"
-            ],
-            "support": {
-                "issues": "https://github.com/tobscure/json-api/issues",
-                "source": "https://github.com/tobscure/json-api/tree/master"
-            },
-            "abandoned": true,
-            "time": "2016-03-31T09:25:28+00:00"
-        },
-        {
             "name": "voku/portable-ascii",
             "version": "1.6.1",
             "source": {
@@ -7345,6 +8070,64 @@
                 }
             ],
             "time": "2022-01-24T18:55:24+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozarts/assert.git",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "reference": "11cb2199493b2f8a3b53e7f19068fc6aac760991",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "php": "^7.2 || ^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan": "<0.12.20",
+                "vimeo/psalm": "<4.6.1 || 4.6.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.13"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.10-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "support": {
+                "issues": "https://github.com/webmozarts/assert/issues",
+                "source": "https://github.com/webmozarts/assert/tree/1.11.0"
+            },
+            "time": "2022-06-03T18:03:27+00:00"
         },
         {
             "name": "wikimedia/less.php",
@@ -7495,29 +8278,30 @@
         },
         {
             "name": "flarum/testing",
-            "version": "v0.1.0-beta.16.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/testing.git",
-                "reference": "7c6cc2772bf6aa0af3e93a2d52ea9d4618f044c5"
+                "reference": "fd9251f9cf540c7df074bc6e7dfeb35de321efb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/testing/zipball/7c6cc2772bf6aa0af3e93a2d52ea9d4618f044c5",
-                "reference": "7c6cc2772bf6aa0af3e93a2d52ea9d4618f044c5",
+                "url": "https://api.github.com/repos/flarum/testing/zipball/fd9251f9cf540c7df074bc6e7dfeb35de321efb4",
+                "reference": "fd9251f9cf540c7df074bc6e7dfeb35de321efb4",
                 "shasum": ""
             },
             "require": {
-                "mockery/mockery": "^1.4",
+                "ext-json": "*",
+                "mockery/mockery": "^1.5",
                 "phpunit/phpunit": "^9.0"
             },
             "require-dev": {
-                "flarum/core": "^0.1.0-beta"
+                "flarum/core": "*@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1.x-dev"
+                    "dev-main": "1.x-dev"
                 }
             },
             "autoload": {
@@ -7536,7 +8320,7 @@
                 "forum"
             ],
             "support": {
-                "source": "https://github.com/flarum/testing/tree/v0.1.0-beta.16.1"
+                "source": "https://github.com/flarum/testing/tree/v1.8.0"
             },
             "funding": [
                 {
@@ -7546,13 +8330,9 @@
                 {
                     "url": "https://opencollective.com/flarum",
                     "type": "open_collective"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/flarum/core",
-                    "type": "tidelift"
                 }
             ],
-            "time": "2021-03-11T18:07:31+00:00"
+            "time": "2023-05-02T18:24:14+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -9355,10 +10135,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "flarum/core": 10,
-        "flarum/testing": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
