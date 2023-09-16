@@ -8,7 +8,7 @@
   "license": "MIT",
   "require": {
     "flarum/core": "^1.0.0",
-    "acpl/mobile-tab": "*"
+    "acpl/mobile-tab": "^1.1"
   },
   "require-dev": {
     "flarum/testing": "^1.0.0"

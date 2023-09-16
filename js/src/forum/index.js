@@ -1,5 +1,5 @@
-import './mobile-tab-overrides.js';
-
-app.initializers.add('webbinaro/flarum-tookit', () => {
+import mobileTabOverrides from "./mobile-tab-overrides"; 
+app.initializers.add('webbinaro-tookit', () => {
   console.log('[webbinaro/flarum-tookit] Hello, forum!');
+  mobileTabOverrides();
 });

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cc616163fb664ffe4bf804bb2b4c123",
+    "content-hash": "a66c2e4065a06af383a5ff740d6155ac",
     "packages": [
         {
             "name": "acpl/mobile-tab",
