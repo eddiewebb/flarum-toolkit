@@ -12,7 +12,7 @@ export default () => {
     // Add new item
     items.add(
       'categories',
-      <MobileTabItem route={app.route('categories')} icon="fas fa-tags" label={app.translator.trans('webbinaro-toolkit.forum.labels.categories')} />,
+      <MobileTabItem route={app.route('categories')} icon="fas fa-tags" label="Categories" />,
       90
     );
 
